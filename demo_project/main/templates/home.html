@@ -8,8 +8,17 @@
   </form>
 </p>
 
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+
 {% if reverse_complement %}
   <p>
     <b>Reverse Complement</b>: {{reverse_complement}}
+  </p>
+
+  <p style="font-family: monospace,Courier">
+  	<span>mRNA strand: {{ transcribed }}</span></br>
+  	<span>Amino acids:  {{ translation }}</span>
   </p>
 {% endif %}
